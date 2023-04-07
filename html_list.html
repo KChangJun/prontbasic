@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List / Table</title>
+    <style>
+        table,th,td{border: 1px solid black;}
+        thead{
+            background-color: cadetblue;
+            color: chartreuse;
+        }
+        tfoot{
+            background-color: aqua;
+            border-color: crimson;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Ordered List-->
+    <!-- 순서가 있는 리스트-->
+    <!-- 리스트의 아이템을 지정할 땐 <li></li> 요소 사용 -->
+    <!-- 순서가 있는 리스트를 사용하면 첫 아이템이 숫자 1부터 번호가 자동 지정 됨-->
+    
+    <ol>
+        <li>자바</li>
+        <li>MySQL</li>
+        <li>HTML</li>
+        
+    </ol>
+    <!-- type 속성-->
+    <!-- type 속성을 사용하면 숫자(1), 영 대소문자(a,A), 로마숫자 대소문자(i,I)로 표기 가능-->
+    <!-- start 속성 -->
+    <!-- start 속성을 사용하면 지정한 위치부터 순서를 시작함 숫자를 넣어야함 -->
+    <ol type="I" start="5">
+        <li>자바</li>
+        <li>MySQL</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+    </ol>
+
+    <!-- Unordered List-->
+    <!-- 순서가 없는 리스트 -->
+    <!-- 순서가 없는 리스트를 사용하면  ．,■ 이 붙어서 표기 됨-->
+
+    <ul >
+        <li>자바</li>
+        <li>MySQL</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+        <li>HTML</li>
+    </ul>
+
+    <!-- Table -->
+    <!-- 행과 열로 구성 되어있는 데이터 집합 표시-->
+    <!-- <table></table> 태그로 테이블임을 명시-->
+    <!-- <tr></tR> 태그로 하나의 행임을 명시-->
+    <!-- <td></td> 태그로 행의 열을 명시-->
+    <table>
+        <tr>
+            <td>교과목</td>
+            <td>능력단위명</td>
+            <td>개강일</td>
+            <td>종강일</td>
+        </tr>
+        <tr>
+            <td>(전공)JAVA 프로그래밍 [정보기술개발]	</td>
+            <td>프로그래밍 언어 활용	</td>
+            <td>2023-02-22	</td>
+            <td>2023-03-08	</td>
+        </tr>
+        <tr>
+            <td>(전공)JAVA 프로그래밍 [정보기술개발]	</td>
+            <td>프로그래밍 언어 응용	</td>
+            <td>2023-03-09	</td>
+            <td>2023-03-22	</td>
+        </tr>
+
+    </table>
+    <!-- <thead>, <tbody>, <tfoot>-->
+    <!-- 테이블을 헤드, 바디,풋 으로 구조화를 시켜주는 요소-->
+    <br /> 
+    <br />
+<table>
+    <thead>   
+        <tr>
+            <th>dd</th>
+            <th>ff</th>
+        </tr>
+    </thead>
+    <tbody> 
+        <tr>
+            <td>ff</td>
+            <td>ef</td>
+        </tr>
+    </tbody>
+    <tfoot>   
+        <tr>
+            <td>d다이나</td>
+            <td>efaefa</td>
+        </tr>    
+    </tfoot>
+</table>
+<br />
+<br />
+
+
+    <!-- colspan /rowspan-->
+    <!-- 열 2개를 차지함 / 행  2개를 차지함-->
+    <!-- 행이든 열이든 두개를 차지할 경우 그 다음에 적용될 행, 열에 <td>,<tr> 을 한자리 차지 하고 있음-->
+    <!-- hahihuheho-->
+    
+
+<table>
+    <thead>
+    <tr>
+        <th>교과목</th>
+        <th>능력단위명</th>
+        <th>개강일</th>
+        <th colspan="2">종강일</th>
+    </tr>
+</thead>
+    <tr>
+        <td rowspan="2">(전공)JAVA 프로그래밍 [정보기술개발]	</td>
+        <td>프로그래밍 언어 활용	</td>
+        <td>2023-02-22	</td>
+        <td>2023-03-08	</td>
+        <td rowspan="2">활활활화로하뢓</td>
+    </tr>
+    <tr>
+       
+        <td>프로그래밍 언어 응용	</td>
+        <td>2023-03-09	</td>
+        <td>2023-03-22	</td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Selector</title>
+    <style>
+        /* CSS 선택자  */
+        /* 스타일 속성을 적용할 대상을 선택하는 것*/
+        /* 전체 선택자(*) */
+        /* 모든 HTML 요소에 대해서 해당 스타일 시트를 적용하기 위한 선택자 (*)*/
+        * {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 300; /*폰트 굵기*/ 
+        }
+      
+
+        /* 타입 선택자*/
+        /* 특정한 요소에 대해 스타일을 적용하기 위한 선택지(요소명) */
+
+        h1 {
+            color: red;
+
+        }
+
+        h2 {
+            color: #00ff00;
+        }
+
+        p {
+            color: #0000ff;
+        }
+
+        /* 클래스 선택자*/
+        /* 특정 클래스에 대한 스타일을 적용하기 위한 선택자 (.클래스명) */
+
+        .title {
+            font-size: 20px !important;
+            font-weight: 700;    
+        }
+
+        .subtitle{
+            font-size: 16px;
+            font-weight: 500;
+
+        }
+    
+        /* 아이디 선택자*/
+        /* 특정 아이디에 대한 스타일을 적용하기 위한 선택자(#아이디명)*/
+        #h1-subtitle1{
+            color: #000000;
+        }
+
+        /*class 는 CSS,  id는 자바 스크립트를 위한 용도가 더 크다 자바스크립트 사용 시 아이디가 중복되어 있을경우 하나의 아이디에만 자바 스크립트가 적용된다.*/
+
+
+        /*그룹 선택자*/
+        /*같은 스타일을 사용하는 선택자들을 나열 하여 속성을 부여하는 방법 선택자 사이에 (,)로 구분한다*/
+        /* 클래스로 사용하기 보다는 기본적인 선택자들에 대한 설정을 미리 할 때 사용한다. 초기 설정 같은 느낌*/
+        .class-1, .class-2, .class-3, .class-4 {
+            background-color: rgba(0, 0, 0, 0.24);
+        }
+
+        /* 자손 선택자*/
+        /*특정 자손들에 대해서 스타일을 적용하기 위한 선택자()*/
+        /* html에 종속되기 때문에 사용을 지양함*/
+        .div h1 {
+            color: #925858;
+        }
+        .div-h1 {
+            color:#ff00ff;
+            font-size: 10px;
+            text-align: center;
+        }
+        /*클래스를 중첩하고 싶을 때에는 class=" " 에서 " " 사이에 클래스를 넣고 각 클래스틑 띄워쓰기로 구분한다.*/
+        /*적용에 대한 순서는 style의 위에서 아래로 좌측에서 우측 순이다.*/
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="div-h1">
+            <h1 class="title">h1 제목 태그입니다.</h1>
+            <h1 class="subtitle">h1 부제목 태그입니다.</h1>
+        <p>lewufu are ase aevedl edas</p>
+        </div>
+    </div>
+    <h1 class="title">h1 제목 태그입니다.</h1>
+    <h1 id="h1-subtitle1" class="subtitle">h1 부제목 태그입니다.</h1>
+
+    <h2 class="title">h2 제목 태그입니다.</h2>
+    <h2 class="subtitle">h2 부제목 태그입니다.</h2>
+
+    <h2 class="title">h2 제목 태그입니다.</h2>
+    <h2 class="subtitle">h2 부제목 태그입니다.</h2>
+    
+    <p class="class-1"> p 태그 입니다.</p>
+    <p class="class-2"> p 태그 입니다.</p>
+    <p class="class-3"> p 태그 입니다.</p>
+    <p class="class-4"> p 태그 입니다.</p>
+    
+</body>
+</html>
+

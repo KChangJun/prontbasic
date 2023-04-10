@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_box</title>
+<style>
+    * {
+        margin: 0;
+    }
+    /* margin 요소 간의 간격, padding div,span의 경계선과 안의 내용물 간의 간격 */
+    /*한 덩이의 총 크기는 마진 + 해당영역의 크기 + border로 인한 경계선크기 + padding 설정으로 인한 크기 */
+    .span-1{
+        display: block;
+        background-color: aquamarine;
+        width: 100px;
+        height: 100px;
+        border:5px black solid;
+        padding:10px;
+        margin:10px;
+        }
+
+    .span-2{
+        display: block;
+        background-color: crimson;
+        width: 100px;
+        height: 100px;
+        
+    }
+    .div-1{
+        display:inline; /*사이즈는 내용에 따라가지만 어차피 한줄 다차지함*/
+        background-color: rgb(17, 250, 180);
+    }
+    .div-2{/*사이즈를 미리 정할수 있지만 그래도 어쨋든 한줄 다 차지함*/
+        display: block; 
+
+    }
+    .div-3{
+        display:flex; /* block 으로 한줄을 다 차지해야할 요소들도 횡으로 배치 할 수 있게 해준다.*/
+        background-color: orange;
+        height: 300px;
+        flex-direction: row-reverse; /* 기준 선을 정함*/
+        align-items: center; /*기준선을 보고 정렬을 함*/
+        justify-content: space-around; /*justify - content  : 내용 정렬*/ /*SPACE AROUND 모두 동일한 비율로 배치*/
+    }
+</style>
+</head>
+<body>
+    <span class="span-1">Content</span>
+    <span class="span-2">Content</span>
+
+    <div class="div-1">Content</div>
+    <div class="div-2">Content</div>
+    <div class="div-3">
+        <div class="span-1" style="flex : 1">1</div>
+        <div class="span-1" style="flex : 1">2</div>
+        <div class="span-1" style="flex : 1">3</div>
+        <div class="span-1" style="flex : 1">4</div>
+    </div>
+</body>
+</html>
+<!---->

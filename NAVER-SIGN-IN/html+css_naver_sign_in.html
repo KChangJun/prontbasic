@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naver - 로그인</title>
+    <link rel="stylesheet" href="./naver-sigin-in.css" />
+</head>
+<body>
+    <div id="wrap" class="wrap">
+    <!-- Header-->
+    <div class="header">
+        <div class="header-inner">
+        <a href="https://www.naver.com" class="logo">
+         <h1 class="blind">NAVER</h1>
+        </a>
+    
+         <div class="lang">
+        <select class="select">
+            <option>한국어</option>
+            <option>English</option>
+        </select>
+         </div>
+        </div>
+    </div>
+    <!-- Main-->
+    <div class="main">
+        <div class="content">
+            <!-- 로그인 wrapper-->
+            <div class="sign_in_wrapper">
+                <form action="httlps://nid.naver.com/nidlogin.login" method="POST" > <!--action url을 해당 서버에 보낸다 post는 숨겨서 get 은 url 안에 포함 시켜서 보낸다-->
+                    <ul class="panel_wrap">
+                        <li  class="panel_item">
+                            <div class="panel_inner">
+                                <!-- id Password wrapper-->
+                                <div  class="id_passwrod_wrapper">
+                                    <div class="input_row">
+                                        <div class="icon_cell">
+                                            <span class="icon_id">
+                                                <span class="blind">아이디</span>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="input_text" maxlength="41" placeholder="아이디" value/>
+                                    </div>
+                                    <div class="input_row">
+                                        <div class="icon_cell">
+                                            <span class="icon_pw">
+                                                <span class="blind">비밀번호</span>
+                                            </span>
+                                        </div>
+                                        <input type="password" name="pw" id="pw" class="input_text" maxlength="16" placeholder="비밀번호" />
+                                    </div>
+                                </div>
+                                <!--sign in keep wrapper-->
+                                <div class="sing_in_keep_wrapper">
+                                    <div class="keep_check">
+                                        <input type="checkbox" id="keep" name="nvlong" class="input_keep" value="off" />
+                                        <label for="keep" class="keep_text">
+                                        
+                                            로그인 상태 유지
+                                        </label>
+                                    </div>
+                                    <div class="ip_check"></div>
+
+
+                                </div>
+                                <div class="btn_login_wrap">
+                                    <button type="submit" class="btn_login" id="log.login">
+                                        <span class="btn_text">로그인</span>
+                                    </button>
+
+
+                                </div>
+                            </div>
+
+
+                        </li>
+
+                    </ul>
+
+                </form>
+            </div>
+            <!-- 페이지 이동 네비게이션-->
+            <ul class="find_wrap">
+                <li>
+                    <a target="_blank" class="find_text" href="https://nid.naver.com/user2/help/pwInquiry?lang=ko_KR">
+                        비밀번호 찾기
+                    </a>           
+                 </li>
+                <li>
+                     <a target="_blank" class="find_text" href="https://nid.naver.com/user2/help/idInquiry?lang=ko_KR">
+                        아이디 찾기
+                    </a>           
+                </li>
+                <li>
+                    <a target="_blank" class="find_text" href="https://nid.naver.com/user2/V2Join?m=agree&lang=ko_KR">
+                       회원가입
+                   </a>           
+               </li>
+
+            </ul>
+            <!-- 광고배너-->
+            <div class="banner_wrap">
+                <div class="banner_contnet">
+                    <img class=banner_img src="https://ssl.pstatic.net/melona/libs/1378/1378592/fe1b4bd9453e84b57ed7_20230407151920279.jpg" />
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <div class="footer">
+        <div class="footer_inner">
+            <ul class="footer_link">
+                <li><a class="footer_item" target="_blank" href="https://policy.naver.com/rules/service.html"><span class="text">이용약관</span></a></li>
+                <li><a class="footer_item" target="_blank" href="https://policy.naver.com/rules/privacy.html"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
+                <li><a class="footer_item" target="_blank" href="https://policy.naver.com/rules/disclaimer.html"><span class="text">책임의 한계와 법적고지</span></a></li>
+                <li><a class="footer_item" target="_blank" href="https://help.naver.com/service/5640/category/bookmark?lang=ko"><span class="text">회원정보 고객센터</span></a></li>
+            </ul>
+            <div class="footer_copy">
+                <a target="_blank" href="https://www.navercorp.com/"> 
+                    <span class="footer_logo">
+                        <span class="blind">네이버</span>
+                    </span>
+                </a>
+                <span class="text">Copyright</span>
+                <span class="corp">@ NAVER Corp.</span>
+                <span class="text">All Rights Reserved.</span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

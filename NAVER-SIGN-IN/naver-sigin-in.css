@@ -1,0 +1,374 @@
+*  {
+    margin:0
+    }
+body{
+position:relative;
+height: 100%;
+}
+
+ul{
+    display: block ;
+    list-style: none;
+    padding: 0px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    -webkit-text-size-adjust: none;
+}
+li{
+    margin: 0;
+    padding: 0;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+input{
+    border-radius: 0;
+    border: none;
+    background: 0 0;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+button{
+    cursor:pointer;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.header{
+    padding-bottom: 48px;
+    width:auto;
+}
+.header-inner{
+    margin:0 auto; /* margin, border, padding 에는 총 4개까지 숫자를 넣을수 있는데 한개일때는 모든방향
+    2개일때는 처음은 수평 두번째는 수직/ 
+    3개일때는 첫번째는 위 두번째는 가로 세번째는 아래/4개일 때는
+    4개일때는 첫번째는 위 두번째는 오른쪽 세번째는 아래 네번째는 왼쪽 */
+    width: 743px;
+    padding-top: 108px;
+    position: relative;
+    text-align: center;
+}
+.logo {
+    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+    background-size: 244px 107px;
+    background-position: 0 -51px;
+    background-repeat: no-repeat;
+    width: 155px;
+    height: 30px;
+    display: inline-block;
+
+}
+.blind{ 
+    position: absolute;/*다른 레이아웃에 영향을 미치지 않음*/
+    width: 1px;
+    height: 1px;
+    overflow: hidden; /*정해진 블락의 범위를 넘어 갔을때 넘어가는 부분을숨김*/
+}
+.lang{
+    position: absolute;
+    top:20px;
+    right:0;
+}
+
+.select{
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px; /*줄간 간격*/
+    width:100%;
+    min-width: 95px;
+    height: 30px;
+    padding: 4px 10px 6px 8px;
+    color:#333;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    -webkit-appearance: none;
+    cursor:wait; /* 마우스 커서 모양을 바꿈*/
+    z-index: 1; /* 표시 우선순위 숫자가 클수록 위에 표시되고 낮을수록 아래층에 표시됨 */
+
+}
+.wrap {
+    position: relative;
+    height: 100%;
+    letter-spacing: -.5px;
+}
+.sign_in_wrapper{
+    box-sizing: border-box;
+    width: 460px;
+    margin: 0 auto;
+
+
+}
+.panel_wrap{
+    position:relative;
+    z-index:3;
+    margin-top: -8px;
+}
+
+.panel_item{
+    border: 1px solid #c6c6c6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: #000000 5px 8px 0 rgba(68,68,68,.04);
+
+
+}
+.panel_inner{
+    padding:20px 28px;/*위아래  , 좌우 여백*/
+}
+
+.input_row{
+    position: relative;
+    display:table;
+    table-layout: fixed;
+    width: -webkit-fill-available;
+    padding: 14px 17px 13px;/*위 여백 좌우 여백 아래 여백*/
+
+    height: 100%;
+    border: 1px solid #dadada;
+    text-align: left;;
+
+}
+
+.input_row:first-child{
+    border-radius: 6px 6px 0 0;
+    box-shadow: none;
+
+}
+.input_row:last-child{
+border-radius: 0 0 6px 6px;
+}
+.input_row+.input_row{
+
+    margin-top: -1px;
+}
+
+.icon_cell{
+    display: table-cell;
+    width:24px;
+    vertical-align: middle;
+
+}
+.icon_id{
+    position:absolute;
+    top: 50%;
+    left:17px;
+    margin-top: -8px;
+    background-position: -93px -203px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-image:url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+    background-size: 266px 225px;
+}
+
+.icon_pw{
+    background-position: -129px -203px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 17px;
+    margin-top: -8px;
+    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+    background-size: 266px 225px;
+    
+}
+.input_text{
+    position: relative;
+    display: table-cell;
+    padding-right: 30px;
+    width: -webkit-fill-available;
+    font-size:16px;
+    font-weight:400;
+    line-height: 19px;
+    letter-spacing:-0.5px;
+    color:#222;
+    z-index: 4;
+}
+
+.sing_in_keep_wrapper{
+    position : relative;
+    margin-top: 13px;
+    padding-right: 90px;
+
+}
+.keep_check{
+    position : relative;
+    padding-left: 23px;
+
+}
+.ip_check{
+    position:absolute;
+    top:0;
+    right: 0;
+    padding-right: 38px;
+}
+.input_keep{
+    position: absolute;
+    top:2px;
+    left: 3px;
+    width: 15;
+    height: 15;
+    
+}
+.keep_text{
+    display:inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #777;
+
+}
+.keep_text::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: -244px -87px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_01_login_008d5216.png);
+    background-size: 266px 225px;
+}
+.btn_login_wrap{
+
+    margin-top: 38px;
+}
+.btn_login{
+    display:block;
+    width:-webkit-fill-available;
+    padding: 13px 0;
+    border-radius: 6px;
+    border: solid 1px rgba(0,0,0,.15);
+    background-color: #03c75a;
+    box-sizing: border-box;
+
+
+}
+
+.btn_text{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+}
+
+.find_wrap{
+    padding: 20px 0 35px;
+    text-align: center;
+
+}
+.find_text{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #888;
+}
+.find_wrap li, .relogin_find_wrap li {
+    position: relative;
+    display: inline-block;
+}
+.find_wrap li+li{
+    padding-left: 28px;
+}
+
+.find_wrap li+li::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    width: 1px;
+    height: 12px;
+    border-radius: 0.5px;
+    background-color: #dadada;
+
+
+
+}
+.banner_wrap{
+
+    width:460px;
+    height: 147px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.banner_content{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 0;
+}
+.banner_img{
+    width:460px;
+
+}
+.footer{
+    margin: 0 40px;
+
+}
+.footer_inner{ 
+    position: relative;
+    text-align: center;;
+
+}
+.footer_link li{
+    display: inline-block;
+
+}
+.footer_link li+li{
+    position:relative;
+    padding-left: 13px;
+
+}
+.footer_link li+li::before{
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 1px;
+    height: 11px;
+    background-color: #dadada;
+}
+
+.text{
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -.5px;
+    color: #888;
+}
+.footer_logo{
+    display: inline-block;
+    vertical-align: top;
+    background-position: -157px -51px;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 15px;
+    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+    background-size: 244px 107px;
+
+
+}
+.corp{
+    padding: 0 2px;
+    font-weight: 500;
+    color: #000;
+    line-height: 16px;
+    font-family: 'Helvetica Neue',sans-serif;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+
+
+}
+.footer_copy{
+    margin-top: 9px;
+}

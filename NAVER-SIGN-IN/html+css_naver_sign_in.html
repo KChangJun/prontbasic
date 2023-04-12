@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>naver - 로그인</title>
     <link rel="stylesheet" href="./naver-sigin-in.css" />
+    <script>
+        const onSubmitHandler = () => {
+            const id = document.getElementById('id').value;
+            console.log(id);
+            console.log(id.trim());
+            if(!id.trim()){/*빈 문자열이면 false로 받음 근데 !가 들어가서 true가됨*/
+                document.getElementById('login_error').style.display = 'block';
+                return;
+            }
+            document.getElementById('login_error').style.display='none';
+            const form= document.getElementById('form');
+            form.submit();
+
+        }
+
+    </script>
 </head>
 <body>
     <div id="wrap" class="wrap">
@@ -29,7 +45,7 @@
         <div class="content">
             <!-- 로그인 wrapper-->
             <div class="sign_in_wrapper">
-                <form action="httlps://nid.naver.com/nidlogin.login" method="POST" > <!--action url을 해당 서버에 보낸다 post는 숨겨서 get 은 url 안에 포함 시켜서 보낸다-->
+                <form id="form" action="httlps://nid.naver.com/nidlogin.login" method="POST" > <!--action url을 해당 서버에 보낸다 post는 숨겨서 get 은 url 안에 포함 시켜서 보낸다-->
                     <ul class="panel_wrap">
                         <li  class="panel_item">
                             <div class="panel_inner">
@@ -41,7 +57,7 @@
                                                 <span class="blind">아이디</span>
                                             </span>
                                         </div>
-                                        <input type="text" class="input_text" maxlength="41" placeholder="아이디" value/>
+                                        <input type="text" class="input_text" maxlength="41" placeholder="아이디" id="id" name="id" value/>
                                     </div>
                                     <div class="input_row">
                                         <div class="icon_cell">
@@ -53,7 +69,7 @@
                                     </div>
                                 </div>
                                 <!--sign in keep wrapper-->
-                                <div class="sing_in_keep_wrapper">
+                                <div class="login_keep_wrap">
                                     <div class="keep_check">
                                         <input type="checkbox" id="keep" name="nvlong" class="input_keep" value="off" />
                                         <label for="keep" class="keep_text">
@@ -65,11 +81,16 @@
 
 
                                 </div>
+                                <!-- sign in error-->
+                                <div class="login_error_wrap" style="display: none" id="login_error">
+                                    <div class="error_message">
+                                        <strong>아이디</strong>를 입력하세요
+                                    </div>
+                                </div>
                                 <div class="btn_login_wrap">
-                                    <button type="submit" class="btn_login" id="log.login">
+                                    <button type = "button" class="btn_login" id="log_login" onClick="onSubmitHandler();">
                                         <span class="btn_text">로그인</span>
                                     </button>
-
 
                                 </div>
                             </div>

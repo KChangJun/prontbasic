@@ -372,3 +372,23 @@ border-radius: 0 0 6px 6px;
 .footer_copy{
     margin-top: 9px;
 }
+
+.login_error_wrap {
+    position: relative;
+    min-height: 34px;
+    margin: 24px 0 -22px;
+    padding-right: 40px;
+}
+.error_message {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -.5px;
+    color: #ff003e;
+    vertical-align: middle;
+}
+.login_keep_wrap {
+    position: relative;
+    margin-top: 13px;
+    padding-right: 90px;
+}
